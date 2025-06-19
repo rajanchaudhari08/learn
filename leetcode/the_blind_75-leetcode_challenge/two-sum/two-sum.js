@@ -28,7 +28,7 @@ console.log(twoSum(inputArray, target));
 /**
  * Results: [0,1]
  * Time Complexity: O(n) × O(1) = O(n)
- * Time Complexity of "for" Loop: n × O(n) = O(n) [Number of Iterations: n; Time per Iterations: O(1)]
+ * Time Complexity of "for" Loop: n × O(1) = O(n) [Number of Iterations: n; Time per Iterations: O(1)]
  * Map Lookup (has,get): O(1) Average per Lookup
  * Map Insertions (set): O(1) Average per Insert
  */
