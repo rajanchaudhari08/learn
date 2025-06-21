@@ -7,21 +7,21 @@
 
 const productExceptSelf = (numbers) => {
   const n = numbers.length;
-  const output = new Array(n).fill(1);
+  const productArray = new Array(n).fill(1);
 
   let productToLeft = 1;
   for (let i = 0; i < n; i++) {
-    output[i] = productToLeft;
+    productArray[i] = productToLeft;
     productToLeft *= numbers[i];
   }
 
   let productToRight = 1;
   for (let i = n - 1; i >= 0; i--) {
-    output[i] *= productToRight;
+    productArray[i] *= productToRight;
     productToRight *= numbers[i];
   }
 
-  return output;
+  return productArray;
 };
 
 console.log(productExceptSelf([1, 2, 3, 4]));
