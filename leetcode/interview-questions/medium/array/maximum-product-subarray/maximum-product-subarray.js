@@ -12,17 +12,23 @@ const maxProduct = (numbers) => {
   let maxProductResult = numbers[0];
 
   for (let i = 1; i < numbers.length; i++) {
-    const current = numbers[i];
+    const currentValue = numbers[i];
 
-    if (current < 0) {
+    if (currentValue < 0) {
       [currentMaxProduct, currentMinProduct] = [
         currentMinProduct,
         currentMaxProduct,
       ];
     }
 
-    currentMaxProduct = Math.max(current, currentMaxProduct * current);
-    currentMinProduct = Math.min(current, currentMinProduct * current);
+    currentMaxProduct = Math.max(
+      currentValue,
+      currentMaxProduct * currentValue
+    );
+    currentMinProduct = Math.min(
+      currentValue,
+      currentMinProduct * currentValue
+    );
 
     maxProductResult = Math.max(maxProductResult, currentMaxProduct);
   }
