@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Security Meta Tags -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; object-src 'none'; base-uri 'self';"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- <meta http-equiv="X-Frame-Options" content="DENY" /> -->
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
+    />
+    <title data-i18n="title">Accessible Modal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main class="main-container">
+      <button
+        id="openModalButton"
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="modal"
+        aria-expanded="false"
+        data-i18n="openModalButton"
+      >
+        Open Modal
+      </button>
+    </main>
+
+    <div id="modalOverlay" class="modal-container" tabindex="-1" hidden></div>
+
+    <section
+      id="modal"
+      class="modal-window"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDescription"
+      hidden
+    >
+      <article class="card-container" role="document">
+        <header>
+          <h2 id="modalTitle" data-i18n="modalTitle">Modal Heading</h2>
+        </header>
+        <section>
+          <p id="modalDescription" data-i18n="modalDescription">
+            Modal Description: Short paragraph about the content related to the
+            modal. You can add UI elements or HTML components.
+          </p>
+        </section>
+      </article>
+    </section>
+  </body>
+</html>
